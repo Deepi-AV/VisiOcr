@@ -1,0 +1,84 @@
+/* General page styling with gradient background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f0f4f8, #d9e6f2);
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+/* Adding a subtle overlay pattern */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/gray-floral.png');
+    opacity: 0.1;
+}
+
+.center-wrapper {
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2rem;
+    color: #6973e0;
+
+}
+
+
+/* Card container styling */
+.upload-container {
+    position: relative;
+    width: 400px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1;
+    /* Ensures the card appears above the background pattern */
+}
+
+/* Header styling */
+.upload-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 20px 0;
+}
+
+/* File input styling */
+.file-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* Upload button styling */
+.upload-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for button */
+.upload-btn:hover {
+    background-color: #218838;
+}

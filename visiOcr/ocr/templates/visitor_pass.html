@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Pass</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/visitor_pass.css' %}">
+</head>
+<body>
+<div class="container">
+    <!-- Form for generating visitor pass -->
+    <div class="form-container">
+        <form method="POST" enctype="multipart/form-data" action="{% url 'visitor_pass' %}">
+            {% csrf_token %}
+                
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" name="phone_number" required>
+            
+            <button type="submit">Generate Visitor Pass</button>
+        </form>
+    </div>
+
+    <!-- Visitor Pass display -->
+    {% if visitor_pass %}
+    <div class="pass-container">
+        <div id="visitor-pass" class="visitor-pass">
+            <h2>Visitor Pass</h2>
+            <p><strong>Name:</strong><span class="name"> {{ visitor_pass.name }}</span></p>
+            <p><strong>DOB:</strong><span class="dob"> {{ visitor_pass.dob }}</span></p>
+            <p><strong>Phone Number:</strong><span class="phone-number"> {{ visitor_pass.phone_number }}</span></p>
+            <p><strong>Generation Date:</strong> {{ visitor_pass.gen_date }}</p>
+            <p><strong>Expiry Date:</strong> {{ visitor_pass.exp_date }}</p>
+
+            <div id="qr-container" class="qr-code-container"></div>
+            
+        </div>
+        
+        <button id="download-pass-btn">Download Pass</button>
+    </div>
+    {% endif %}
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+<script src="{% static 'js/visitor_pass.js' %}"></script>
+</body>
+</html> 
+
+
+
+
+

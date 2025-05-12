@@ -1,0 +1,136 @@
+/* General styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+    margin: 0;
+}
+
+/* Styling for the form and visitor pass container */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Styling for form elements */
+label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #285bcb;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e479e;
+}
+
+/* Styling for the visitor pass display */
+
+.visitor-pass {
+    padding: 20px;
+    /* Space inside the pass */
+    border: 3px solid #7c9ee7;
+    /* Pink border */
+    border-radius: 10px;
+    background-color: #dcdfec;
+    /* Light pink background */
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional shadow */
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    /* Ensures padding is included in width calculations */
+}
+
+.pass-container {
+    margin-top: 20px;
+    /* Adds space above the pass */
+    text-align: center;
+    /* Centers the content inside the container */
+}
+
+#download-pass-btn {
+    margin-top: 20px;
+    /* Space between the button and the pass */
+    padding: 10px 20px;
+    /* Adds padding inside the button for better aesthetics */
+    background-color: #285bcb;
+    /* Pink button background */
+    color: white;
+    /* White text color */
+    border: none;
+    /* Removes border from the button */
+    border-radius: 5px;
+    /* Rounded corners for the button */
+    cursor: pointer;
+    /* Changes cursor to pointer on hover */
+}
+
+#download-pass-btn:hover {
+    background-color: #1e479e;
+    /* Darker pink on hover */
+}
+
+
+
+.visitor-pass h2 {
+    font-size: 24px;
+    color: #2d2c2c;
+    margin: 0 0 10px;
+}
+
+.visitor-pass p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #2d2c2c;
+}
+
+.visitor-pass strong {
+    color: #2d2c2c;
+}
+
+.qr-code-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
